@@ -355,8 +355,7 @@ msg	.byte	"MEMLO has ",0
 
 
 	.bank
-; OS/A does not like this.. prevents returning
-; back to OS/A with rts.
+; Set run address.  This must be at the end (use 2nd bank to force it)
 	*=	$2e0
 	.word	main
 

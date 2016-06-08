@@ -275,6 +275,10 @@ startit	jsr	xorit
 ; Include offtab, bittab and xorit code.
 	.include "autogen.asm"
 
+; Draw a pixel
+;  Line address in addr
+;  X offset in A
+;  tmp has rotation offset
 draw
 	pha
 	clc
@@ -329,8 +333,7 @@ short	cpy	count
 	rts
 
 	.bank
-; OS/A does not like this.. prevents returning
-; back to OS/A with rts.
+; Set run address
 	*=	$2e0
 	.word	main
 	.end
