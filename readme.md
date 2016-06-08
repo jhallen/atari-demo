@@ -2,6 +2,8 @@
 
 This is a rotating cylinder demo.
 
+[watch demo on youtube](https://youtu.be/X7iS4jgMyZw)
+
 To run it in a simulator, type:
 
 	make try
