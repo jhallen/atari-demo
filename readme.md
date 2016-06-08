@@ -4,6 +4,12 @@ This is a rotating cylinder demo.
 
 [watch demo on youtube](https://youtu.be/X7iS4jgMyZw)
 
+Bonus demo: Atari BASIC maze generator:
+
+[watch maze generator on youtube](https://youtu.be/Yf_OPNQA1-4)
+
+## Atari development on Linux
+
 To run it in a simulator, type:
 
 	make try
@@ -42,3 +48,7 @@ set "snoop = 0" to reduce the number of messages it prints:
 This is for the sio2pc card connected to a real serial port, not USB:
 
 [sio2pc](http://www.atarimax.com/sio2pc/documentation/jack/index.php)
+
+## Maze generator
+
+It's m6.bas on maze.atr.
