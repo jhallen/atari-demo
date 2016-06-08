@@ -1,0 +1,32 @@
+--- atari.cpp~  2014-01-08 08:09:53.000000000 -0500
++++ atari.cpp   2016-06-04 00:03:10.000000000 -0400
+@@ -102,8 +102,8 @@
+   VBITimer->StartTimer(0,usecs);
+   missedframes = 0;
+   machine->Display()->ShowPointer(false);
+-  if (!machine->CheckLicence())
+-    return;
++  // if (!machine->CheckLicence())
++  //  return;
+   //
+   // Loop over captured async events we must handle
+   //
+@@ -263,6 +263,10 @@
+       }
+     }
+     if (machine->Quit()) {
++       redo = false;
++    }
++#if 0
++    if (machine->Quit()) {
+       // Check whether the user really wants to quit.
+       if (YesNoRequester->Request("Do you really want to quit Atari++?",
+                                  "Continue Execution","Quit Program",NULL) == 0) {
+@@ -272,6 +276,7 @@
+        redo = false;
+       }
+     }
++#endif
+   } while(redo);
+ }
+ ///
