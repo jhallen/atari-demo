@@ -2,7 +2,10 @@ all : maze.atr dos2s.atr
 #	sio2linux maze.atr
 
 serv : maze.atr
-	sio2linux maze.atr
+# USB sio2pc needs -n flag
+	sio2linux -s /dev/ttyUSB0 -n maze.atr
+# Original sio2pc on real serial port does not
+#	sio2linux -s /dev/ttyS0 maze.atr
 
 try : maze.atr
 	atari++ -VideoMode NTSC -Image.1 maze.atr
