@@ -16,7 +16,7 @@ To run it in a simulator, type:
 
 To run it with sio2pc (for a real Atari to boot), type:
 
-	make serv
+	sudo make serv
 
 Then at the OS prompt, type:
 
@@ -45,9 +45,14 @@ set "snoop = 0" to reduce the number of messages it prints:
 
 [sio2linux](http://www.crowcastle.net/preston/atari/)
 
-This is for the sio2pc card connected to a real serial port, not USB:
+Tihs works with both the version which plugs into a real serial port:
 
 [sio2pc](http://www.atarimax.com/sio2pc/documentation/jack/index.php)
+
+And versions which use the FTDI USB to RS-232 adapter chip.  In this case
+use the '-n' flag for sio2linux.
+
+[sio2pc-usb](http://www.lotharek.pl/product.php?pid=98)
 
 ## Maze generator
 
